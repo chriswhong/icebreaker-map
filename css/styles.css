@@ -1,0 +1,86 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#map {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+#btn-spin {
+    font: bold 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    background-color: #3386c0;
+    color: #fff;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    z-index: 1;
+    border: none;
+    width: 200px;
+    margin-left: -100px;
+    display: block;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 3px;
+}
+
+#btn-spin:hover {
+    background-color: #4ea0da;
+}
+
+#build-logo {
+    background-image: url('../img/build-logo.svg');
+    background-repeat: no-repeat;
+    background-color: #000;
+    border-radius: 10px;
+    height: 46px;
+    width: 258px;
+    position: absolute;
+    z-index: 1;
+    background-position: 15px 10px;
+    top: 10px;
+    left: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.75)
+}
+
+.marker-inner {
+    background: #000;
+    color: #FFF;
+    padding: 0px 6px;
+    font-weight: bold;
+    font-family: 'Cera Medium';
+    border-radius: 3px;
+    animation: show .25s;
+    display: block;
+    transform-origin: bottom right;
+}
+
+.marker-inner::before {
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid black;
+    content: '';
+    position: absolute;
+    top: 10px;
+    right: 0;
+}
+
+@font-face {
+    font-family: 'Cera Medium';
+    src: url('https://assets.website-files.com/6050a76fa6a633d5d54ae714/6050ab4346858de0e05420ae_Cera%20Pro%20Medium.woff2');
+}
+
+@keyframes show {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
